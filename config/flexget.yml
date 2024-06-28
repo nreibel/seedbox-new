@@ -1,0 +1,11 @@
+tasks:
+  ShowRSS:
+    rss: http://showrss.info/user/<user_id>.rss?magnets=true&namespaces=false
+    all_series:
+      quality: 1080p
+      propers: yes
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission

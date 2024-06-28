@@ -1,0 +1,13 @@
+# cron syntax is <minute> <hour> <dom> <mon> <dow> <command>
+LOGFILES=/var/log
+SHELL=/bin/sh
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:usr/local/bin:/usr/local/sbin
+
+# Check on VPN status every 5 minutes
+*/5 * * * * /root/vpn.sh >$LOGFILES/vpn.log 2>&1
+
+# Flexget set to execute every hour
+0 * * * * /opt/flexget/bin/flexget execute >$LOGFILES/flexget.log 2>&1
+
+# Uncomment to get weekly automatic updates (every sunday at 6AM)
+# 0 6 * * 0 /opt/update.sh >$LOGFILES/update.log 2>&1
