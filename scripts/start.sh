@@ -31,6 +31,7 @@ service minidlna start
 service smbd start
 service cron start
 service dbus start
+service ssh start
 
 avahi-daemon --no-chroot -D
 
